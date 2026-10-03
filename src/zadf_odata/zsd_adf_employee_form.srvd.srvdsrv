@@ -1,0 +1,4 @@
+@EndUserText.label: 'sd - employee'
+define service ZSD_ADF_EMPLOYEE_FORM {
+  expose ZCE_ADF_EMPLOYEE as ADF_EMPLOYEE;
+}

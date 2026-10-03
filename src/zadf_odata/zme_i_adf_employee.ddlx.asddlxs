@@ -1,0 +1,49 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName:       'Employee',
+  typeNamePlural: 'Employees',
+  title:          { type: #STANDARD, value: 'Employee' },
+  description:    { type: #STANDARD, value: 'LastName' }
+}
+annotate entity ZC_I_ADF_EMPLOYEE with
+{
+  // Object page: one section with the identification fields
+  @UI.facet: [ { id:       'EmployeeData',
+                 purpose:  #STANDARD,
+                 type:     #IDENTIFICATION_REFERENCE,
+                 label:    'Employee',
+                 position: 10 } ]
+
+  @UI.lineItem:       [ { position: 10, label: 'Employee' } ]
+  @UI.identification: [ { position: 10, label: 'Employee' } ]
+  @UI.selectionField: [ { position: 10 } ]
+  Employee;
+
+  @UI.lineItem:       [ { position: 20, label: 'First name' } ]
+  @UI.identification: [ { position: 20, label: 'First name' } ]
+  FirstName;
+
+  @UI.lineItem:       [ { position: 30, label: 'Last name' } ]
+  @UI.identification: [ { position: 30, label: 'Last name' } ]
+  @UI.selectionField: [ { position: 20 } ]
+  LastName;
+
+  // Currency is rendered next to the amount via @Semantics.amount.currencyCode
+  @UI.lineItem:       [ { position: 40, label: 'Salary' } ]
+  @UI.identification: [ { position: 40, label: 'Salary' } ]
+  Salary;
+
+  @UI.hidden: true
+  SalaryCurrency;
+
+  @UI.lineItem:       [ { position: 50, label: 'Manager' } ]
+  @UI.identification: [ { position: 50, label: 'Manager' } ]
+  Manager;
+
+  @UI.hidden: true
+FormURL;
+
+@UI.lineItem:       [ { position: 60, label: 'Print Form', type: #WITH_URL, url: 'FormURL' } ]
+@UI.identification: [ { position: 60, label: 'Print Form', type: #WITH_URL, url: 'FormURL' } ]
+Form;
+}
