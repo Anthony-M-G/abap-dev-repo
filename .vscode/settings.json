@@ -1,0 +1,10 @@
+{
+  "editor.fontFamily": "'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "files.associations": {
+    "*.abap": "abap",
+    "*.asddls": "cds",
+    "*.asddlxs": "cds",
+    "*.asbdef": "abap"
+  }
+}
