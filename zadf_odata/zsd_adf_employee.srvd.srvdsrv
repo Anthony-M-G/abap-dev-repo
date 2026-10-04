@@ -1,3 +1,5 @@
+// Servicio de datos de empleados utilizado por el FDP configurado en el proveedor PDF.
+// EMPLOYEES es el alias expuesto; leadingEntity identifica la entidad principal.
 @EndUserText.label: 'sd - employee'
 @ObjectModel.leadingEntity.name: 'ZC_I_ADF_EMPLOYEE'
 define service ZSD_ADF_EMPLOYEE {

@@ -1,3 +1,4 @@
+// Behavior managed: persistencia de empleados sobre la tabla indicada.
 managed implementation in class zbp_r_i_adf_employee unique;
 strict ( 2 );
 
@@ -5,13 +6,16 @@ define behavior for ZR_I_ADF_EMPLOYEE alias ADF_EMPLOYEE
 persistent table /dmo/employee_hr
 lock master
 authorization master ( instance )
-//etag master <field_name>
+// No se ha configurado un campo ETag para el control de concurrencia optimista.
 {
+  // La creación solicita autorización global; el handler correspondiente está vacío.
   create ( authorization : global );
   update;
   delete;
+  // La clave no es editable por el consumidor. No se declara numeración en este behavior.
   field ( readonly ) Employee;
 
+  // Relacionar los nombres de la entidad con las columnas de la tabla persistente.
   mapping for /dmo/employee_hr {
 
     Employee = employee;

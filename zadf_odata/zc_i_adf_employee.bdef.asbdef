@@ -1,3 +1,4 @@
+// Exponer en la proyección las operaciones declaradas en el behavior raíz.
 projection;
 strict ( 2 );
 
