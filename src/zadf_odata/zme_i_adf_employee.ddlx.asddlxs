@@ -1,3 +1,4 @@
+// Anotaciones de presentación de la proyección de empleados en Fiori elements.
 @Metadata.layer: #CORE
 @UI.headerInfo: {
   typeName:       'Employee',
@@ -7,7 +8,9 @@
 }
 annotate entity ZC_I_ADF_EMPLOYEE with
 {
-  // Object page: one section with the identification fields
+  // 1. Agrupar los campos de identificación en una sección de la Object Page.
+  // lineItem configura las columnas; identification, los campos de detalle.
+  // selectionField incorpora el campo a los filtros de selección.
   @UI.facet: [ { id:       'EmployeeData',
                  purpose:  #STANDARD,
                  type:     #IDENTIFICATION_REFERENCE,
@@ -28,7 +31,8 @@ annotate entity ZC_I_ADF_EMPLOYEE with
   @UI.selectionField: [ { position: 20 } ]
   LastName;
 
-  // Currency is rendered next to the amount via @Semantics.amount.currencyCode
+  // 2. Mostrar la moneda junto al importe mediante @Semantics.amount.currencyCode.
+  // SalaryCurrency se oculta como campo independiente, pero conserva su uso semántico.
   @UI.lineItem:       [ { position: 40, label: 'Salary' } ]
   @UI.identification: [ { position: 40, label: 'Salary' } ]
   Salary;
@@ -40,6 +44,7 @@ annotate entity ZC_I_ADF_EMPLOYEE with
   @UI.identification: [ { position: 50, label: 'Manager' } ]
   Manager;
 
+  // 3. Ocultar la URL técnica y utilizar Form como texto del enlace al PDF.
   @UI.hidden: true
 FormURL;
 
