@@ -1,0 +1,5 @@
+@EndUserText.label: 'sd - employee'
+@ObjectModel.leadingEntity.name: 'ZC_I_ADF_EMPLOYEE'
+define service ZSD_ADF_EMPLOYEE {
+  expose ZC_I_ADF_EMPLOYEE as EMPLOYEES;
+}
