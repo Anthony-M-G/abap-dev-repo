@@ -1,7 +1,13 @@
-" Behavior pool de la entidad raíz de empleados.
-" Los handlers de autorización se encuentran en el include de implementación local.
-CLASS zbp_r_i_adf_employee DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zr_i_adf_employee.
+class ZBP_R_I_ADF_EMPLOYEE definition
+  public
+  create private .
+
+public section.
+protected section.
+private section.
 ENDCLASS.
 
-CLASS zbp_r_i_adf_employee IMPLEMENTATION.
+
+
+CLASS ZBP_R_I_ADF_EMPLOYEE IMPLEMENTATION.
 ENDCLASS.
