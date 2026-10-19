@@ -1,3 +1,5 @@
+// Servicio de descarga del formulario generado por la custom entity.
+// El alias ADF_EMPLOYEE se utiliza en la ruta construida por FormURL.
 @EndUserText.label: 'sd - employee'
 define service ZSD_ADF_EMPLOYEE_FORM {
   expose ZCE_ADF_EMPLOYEE as ADF_EMPLOYEE;
